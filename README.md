@@ -101,8 +101,6 @@ vocab = tfidf_vectorizer.get_feature_names_out()
 features = pd.DataFrame(np.round(unigramdataGet, 1), columns=vocab)
 features[features>0] = 1
 
-# print(features.iloc[1:5,1:5])
-
 # Training and Testing with Machine Learning Algorithms
 pro = preprocessing.LabelEncoder()
 encpro = pro.fit_transform(sample['Class'])
@@ -117,14 +115,6 @@ nb = nb.fit(X_train, y_train)
 
 # Testing
 y_pred = nb.predict(X_test)
-
-# print(confusion_matrix(y_test, y_pred))
-disp = ConfusionMatrixDisplay(confusion_matrix=confusion_matrix(y_test, y_pred))
-# disp.plot()
-# plt.show()
-
-# print('Accuracy = ', metrics.accuracy_score(y_test,  y_pred))
-# print('Precision', metrics.precision_score(y_test, y_pred))
 
 LR = LogisticRegression(penalty = 'l2', C = 1)
 LR = LR.fit(X_train , y_train)
@@ -162,3 +152,16 @@ print(''.join(pred))
 
 ```
 
+The code imports various libraries, including numpy, pandas, nltk, pyarabic, and sklearn. These libraries provide various functions for data analysis, machine learning, and natural language processing.
+
+It then defines several functions to process the input text data. tokenize tokenizes the text into individual words, remove_Stop_Words removes stop words, stemming stems the words using ISRI stemmer, and normalize normalizes the text by removing diacritics and special characters.
+
+Next, the code reads in a dataset with columns 'Class' and 'Text' using pd.read_csv and stores it in the sample variable. The code then performs several pre-processing steps on the dataset: tokenization, normalization, removing stop words, and stemming.
+
+The code then uses the TfidfVectorizer from sklearn to extract features from the pre-processed text data, converting it into a numerical form that can be used for training machine learning algorithms.
+
+The code then uses LabelEncoder from sklearn.preprocessing to encode the class labels, transforming the class labels from string values to numerical values.
+
+The code then uses the MultinomialNB and LogisticRegression algorithms from sklearn to train and test the dataset, splitting it into training and testing datasets using train_test_split. The code then makes predictions on a sample text using the trained models.
+
+Finally, the code calculates and displays the performance metrics of the models, such as confusion matrix, f1-score, and precision score.
