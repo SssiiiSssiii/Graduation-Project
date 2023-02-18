@@ -23,7 +23,7 @@ tokens = araby.tokenize(text)
 print(tokens)
 # Output: ['مرحبا', 'بالعالم']
 ```
-## remove_Stop_Words function:
+## remove_Stop_Words(tokens) function:
 * Removes stop words from a list of tokens using ArabicStopWords.
 
 ### Parameters:
