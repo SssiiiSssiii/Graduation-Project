@@ -3,25 +3,24 @@ sentiment analysis
 Drive : https://drive.google.com/drive/u/2/folders/1sHGVQ6xxHyAC77hUPb5y3AxUj0buW4nf
 
 
-## Code
-```c
-import numpy as np
-import pandas as pd
-from nltk import ISRIStemmer
-from pyarabic import araby
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score, precision_score
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.naive_bayes import MultinomialNB
-import warnings
-warnings.filterwarnings("ignore")
-from stop_words import ArabicStopWords
-import re
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from sklearn import preprocessing, metrics
+## tokenize(sample)
+* Tokenizes an Arabic text into a list of tokens. This function uses the araby library, which is a Python package for working with Arabic text.
 
+### Arguments
+* Sample: A string containing the Arabic text to be tokenized.        
+### Returns
+* A list of tokens, where each token is a string representing a word in the input text.         
+### Example Usage
+```c
+import araby
+
+text = "مرحبا بالعالم"
+tokens = araby.tokenize(text)
+print(tokens)
+# Output: ['مرحبا', 'بالعالم']
+
+```
+```c
 
 # def word_extraction():
 
