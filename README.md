@@ -44,6 +44,9 @@ filtered = remove_Stop_Words(tokens)
 print(filtered)
 # Output:['المدرسة', 'نتعلم', 'الرياضيات']
 ```
+* The remove_Stop_Words() function takes a list of tokens as input and removes Arabic stop words from the list. The function uses the ArabicStopWords() class from the arabicstopwords package to get a list of Arabic stop words, and then filters the input list to remove any tokens that appear in the stop words list.
+
+* The function returns a new list containing only the tokens that were not stop words. If the input list contains no stop words, the function will simply return a copy of the original list.
 ```c
 
 # def word_extraction():
