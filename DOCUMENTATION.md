@@ -20,6 +20,40 @@ tokens = araby.tokenize(text)
 print(tokens)
 # Output: ['مرحبا', 'بالعالم']
 ```
+
+## normalize(token) function:
+* Is used to perform normalization on Arabic text.
+* Normalization is the process of transforming text into a standard form, to remove any inconsistencies in the text. 
+* In this function, normalization is performed by replacing `similar Arabic letters with a single letter`, `removing diacritics`, and `removing tatweel` (elongation) characters.
+
+### Parameters:
+* token: a string representing an Arabic word.  
+### Returns:
+* A normalized string representing the input token after applying the following transformations:         
+    - Replacing Arabic letters 'إ', 'أ', 'آ', and 'ا' with 'ا'.       
+    - Replacing Arabic letter 'ى' with 'ي'.           
+    - Replacing Arabic letter 'ة' with 'ه'.              
+    - Removing all non-alphabetic characters and digits using regular expressions.             
+    - Removing all diacritics from the Arabic text.            
+    - Removing all tatweel (elongation) characters.               
+### Example Usage:
+```c
+from pyarabic import araby
+import re
+
+def normalize(token):
+    token = re.sub("[إأآا]", "ا", token)
+    token = re.sub("ى", "ي", token)
+    token = re.sub("ة", "ه", token)
+    token = re.sub("[\W\d]", "", token)
+    token = araby.strip_diacritics(token)
+    token = araby.strip_tatweel(token)
+    return token
+    
+print(normalize("وعُدتُ مِنَ المعاركِ لستُ أدري علامَ أضعتُ عمري فـــي النِّزالِ ##1"))
+
+# Output: وعدت من المعارك لست ادري علام أضعت عمري في النزال
+```
 ## remove_Stop_Words(tokens) function:
 * Removes stop words from a list of tokens using `ArabicStopWords` class(our built-in class).
 
@@ -62,3 +96,5 @@ filtered_tokens = ['يشرب', 'محمد']
 print(stemming(filtered_tokens))
 
 # Output: ['شرب', 'حمد']
+```
+
