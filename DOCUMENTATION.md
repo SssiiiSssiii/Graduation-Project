@@ -21,13 +21,13 @@ print(tokens)
 # Output: ['مرحبا', 'بالعالم']
 ```
 ## remove_Stop_Words(tokens) function:
-* Removes stop words from a list of tokens using ArabicStopWords class(our built-in class ).
+* Removes stop words from a list of tokens using `ArabicStopWords` class(our built-in class).
 
 ### Parameters:
 * tokens (list of str): A list of Arabic text tokens.
 
 ### Returns:
-* filtered (list of str): A list of tokens with stop words removed.
+* filtered (list of str): A list of tokens without stop words.
 
 Example Usage:
 ```c
@@ -41,9 +41,6 @@ filtered = remove_Stop_Words(tokens)
 print(filtered)
 # Output:['المدرسة', 'نتعلم', 'الرياضيات']
 ```
-* The remove_Stop_Words() function takes a list of tokens as input and removes Arabic stop words from the list. The function uses the ArabicStopWords() class from the arabicstopwords package to get a list of Arabic stop words, and then filters the input list to remove any tokens that appear in the stop words list.
-
-* The function returns a new list containing only the tokens that were not stop words. If the input list contains no stop words, the function will simply return a copy of the original list.
 
 ## stemming(filtered_tokens) function:
 * This function takes a list of filtered tokens, creates an instance of the ISRIStemmer class (an Arabic stemmer), and uses it to stem each token in the list. 
