@@ -1,6 +1,7 @@
 
 ## tokenize(sample) function:
-* Tokenizes an Arabic text into a list of tokens. This function uses the araby library, which is a Python package for working with Arabic text.
+* Tokenizes an Arabic text into a list of tokens. 
+* This function uses the araby library, which is a Python package for working with Arabic text.
 
 ### Parameters:
 * Sample: A string containing the Arabic text to be tokenized.        
@@ -20,7 +21,7 @@ print(tokens)
 # Output: ['مرحبا', 'بالعالم']
 ```
 ## remove_Stop_Words(tokens) function:
-* Removes stop words from a list of tokens using ArabicStopWords.
+* Removes stop words from a list of tokens using ArabicStopWords class(our built-in class ).
 
 ### Parameters:
 * tokens (list of str): A list of Arabic text tokens.
@@ -43,3 +44,24 @@ print(filtered)
 * The remove_Stop_Words() function takes a list of tokens as input and removes Arabic stop words from the list. The function uses the ArabicStopWords() class from the arabicstopwords package to get a list of Arabic stop words, and then filters the input list to remove any tokens that appear in the stop words list.
 
 * The function returns a new list containing only the tokens that were not stop words. If the input list contains no stop words, the function will simply return a copy of the original list.
+
+## stemming(filtered_tokens) function:
+* This function takes a list of filtered tokens, creates an instance of the ISRIStemmer class (an Arabic stemmer), and uses it to stem each token in the list. 
+
+### Parameters:
+* filtered_tokens (list): A list of Arabic words to be stemmed.     
+### Returns:
+* list: A list of stemmed Arabic words.     
+### Example Usage:
+```c
+from nltk import ISRIStemmer
+
+def stemming(filtered_tokens):
+    stemmer = ISRIStemmer()
+    stemmed_tokens = [stemmer.stem(token) for token in filtered_tokens]
+    return stemmed_tokens
+    
+filtered_tokens = ['يشرب', 'محمد']
+print(stemming(filtered_tokens))
+
+# Output: ['شرب', 'حمد']
