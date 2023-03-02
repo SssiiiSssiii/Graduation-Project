@@ -222,7 +222,7 @@ print('Predicted class:', ''.join(pred))
 This code predicts the sentiment class of a given input text using a Naive Bayes model that was trained on preprocessed text data. The prediction process involves the following steps:
 
 1. The input text is first tokenized using the tokenize() function.
-2 .The resulting tokens are normalized using the normalize() function.
+2. The resulting tokens are normalized using the normalize() function.
 3. Stop words are removed from the normalized tokens using the remove_Stop_Words() function.
 4. The remaining tokens are stemmed using the stemming() function.
 5. The preprocessed tokens are then transformed using the pre-trained TF-IDF vectorizer, tfidf_vectorizer.
