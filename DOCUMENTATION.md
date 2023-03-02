@@ -227,5 +227,5 @@ This code predicts the sentiment class of a given input text using a Naive Bayes
 4. The remaining tokens are stemmed using the `stemming()` function.
 5. The preprocessed tokens are then transformed using the pre-trained `TF-IDF vectorizer`, `tfidf_vectorizer`.
 6. The transformed tokens are passed to the trained `Naive Bayes` model, nb, to predict the sentiment class of the input text.
-7. The predicted class and probabilities for each class are printed to the console. If the predicted probability for both `positive and `negative classes is below a threshold of 0.6, the predicted class is set to `neutral`.
+7. The predicted class and probabilities for each class are printed to the console. If the predicted probability for both `positive` and `negative` classes is below a threshold of 0.6, the predicted class is set to `neutral`.
 8. The final predicted class is printed to the console.
