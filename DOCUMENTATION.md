@@ -178,53 +178,46 @@ except FileNotFoundError:
 
 ## Prediction
 ```c
-# Take input text from user
-Sample_Text = input('Enter Text \n')
+# Prediction on sample text
+sample_text = input('Enter Text \n')
 
-# Tokenize the input text
-tokens = tokenize(Sample_Text)
+tokens = tokenize(sample_text)
 print("Tokens is ----> ", tokens)
 
-# Normalize the tokens
+# Normalizing
 for row in range(len(tokens)):
     for token in range(len(tokens)):
-         tokens[token] = normalize(tokens[token])
+        tokens[token] = normalize(tokens[token])
 
 print("After Normalization ----> ", tokens)
 
-# Remove stop words from the tokens
+# Removing stop_words
 tokens = remove_Stop_Words(tokens)
 
 print("After Remove Stop words ----> ", tokens)
 
-# Stem the tokens
+# Stemming
 tokens = stemming(tokens)
 print("After Stemming ----> ", tokens)
 
-# Convert tokens into list of strings
 tv = [str(tokens)]
-
-# Transform tokens using the pre-trained TF-IDF vectorizer
 x = tfidf_vectorizer.transform(tv)
+pred = nb.predict(x)
+prob = nb.predict_proba(x)
 
-# Predict the class of the input text using the pre-trained Logistic Regression model
-pred = LR.predict(x)
-
-# Get the probability estimates for each class from the pre-trained Logistic Regression model
-prob = LR.predict_proba(x)
-
-# Check if the predicted probability for both positive and negative classes is below a threshold, else predict the class with highest probability
+# Check if the predicted probability for both positive and negative classes is below a threshold
 if prob[0][0] < 0.6 and prob[0][1] < 0.6:
     pred = ['neutral']
 else:
     pred = pro.inverse_transform(pred)
 
 # Print the predicted class and probabilities for each class
-classes = LR.classes_
+classes = nb.classes_
 for i, p in enumerate(prob[0]):
     print(f"{classes[i]}: {p:.4f}")
 
 print('Predicted class:', ''.join(pred))
+
 ```
 This code predicts the sentiment class of a given input text using a Naive Bayes model that was trained on preprocessed text data. The prediction process involves the following steps:
 
