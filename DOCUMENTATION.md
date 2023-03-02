@@ -130,7 +130,7 @@ features[features > 0] = 1
 * Binarizes the features DataFrame by setting non-zero values to 1.
 * Saves the fitted TfidfVectorizer object to a file named `'DS.pkl'` using the pickle.dump() function.
 * Saves the computed TF-IDF matrix to a file named `'DS2.pkl'` using the pickle.dump() function.
-## Training
+## Training using naive bayes
 
 ```c
 try:
@@ -171,4 +171,9 @@ except FileNotFoundError:
     LR = LogisticRegression(penalty='l2', C=1)
     LR = LR.fit(X_train, y_train)
 ```
-
+* Load the tfidf_vectorizer.pkl and tfidf_matrix.pkl files into their respective objects using pickle.
+* Extract the feature names (vocabulary) using the get_feature_names() method on tfidf_vectorizer object.
+* Transform the tfidf matrix into a pandas DataFrame with binary values using np.round and pd.DataFrame.
+* Load trained models and pre-trained preprocessing.LabelEncoder object, if they exist.
+* If the trained models do not exist, pre-process the input features and train MultinomialNB and LogisticRegression models.
+* Save the trained models and preprocessing.LabelEncoder object to disk using pickle and print a message to confirm the save operation.
