@@ -130,4 +130,45 @@ features[features > 0] = 1
 * Binarizes the features DataFrame by setting non-zero values to 1.
 * Saves the fitted TfidfVectorizer object to a file named `'DS.pkl'` using the pickle.dump() function.
 * Saves the computed TF-IDF matrix to a file named `'DS2.pkl'` using the pickle.dump() function.
+## Training
+
+```c
+try:
+    # Load trained models and label encoder from disk
+    with open('nb_model.pkl', 'rb') as f:
+        nb = pickle.load(f)
+    with open('lr_model.pkl', 'rb') as f:
+        LR = pickle.load(f)
+    with open('pro_encoder.pkl', 'rb') as f:
+        pro = pickle.load(f)
+    print('Trained models loaded from disk')
+    
+except FileNotFoundError:
+    # If trained models don't exist, train and save them
+
+    pro = preprocessing.LabelEncoder()
+
+    preprocessed_data = pd.read_csv('modified_data.csv')
+    preprocessed_features = features
+
+    # fit the encoder with the target variable data
+    pro.fit(preprocessed_data['Class'])
+
+    # Transform the target variable using the pre-trained encoder
+    encpro = pro.transform(preprocessed_data['Class'])
+    y = encpro
+
+    # Transform the input features using the preprocessed features
+    X = preprocessed_features
+
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=333)
+
+    # Train a Multinomial Naive Bayes model and a logistic regression model
+    nb = MultinomialNB()
+    nb = nb.fit(X_train, y_train)
+
+    LR = LogisticRegression(penalty='l2', C=1)
+    LR = LR.fit(X_train, y_train)
+```
 
