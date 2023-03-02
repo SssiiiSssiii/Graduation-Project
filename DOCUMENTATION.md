@@ -121,13 +121,13 @@ unigram_data = tfidf.toarray()
 features = pd.DataFrame(np.round(unigram_data, 1), columns=vocab)
 features[features > 0] = 1
 ```
-* Loads a CSV file named 'DS.csv' into a Pandas DataFrame called sample.
-* Creates a TfidfVectorizer object called tfidf_vectorizer and fits it to the text data in the Text column of the sample DataFrame. The TfidfVectorizer object applies sublinear scaling to use smaller weights for higher frequency words, strips accents from words, uses words as the features, uses unigrams (single words) as the features, and limits the number of features to the top 500,000 by frequency.
-* Computes the TF-IDF matrix for the text data using the tfidf_vectorizer object and stores it in a sparse matrix called tfidf.
-* Gets the feature names (vocabulary) of the TF-IDF matrix using the get_feature_names() method of the tfidf_vectorizer object and stores them in a list called vocab.
-* Converts the tfidf sparse matrix to a dense NumPy array called unigram_data.
+* Loads a CSV file named `'DS.csv'` into a Pandas DataFrame called sample.
+* Creates a TfidfVectorizer object called `tfidf_vectorizer` and fits it to the text data in the Text column of the sample DataFrame. The TfidfVectorizer object applies sublinear scaling to use smaller weights for higher frequency words, strips accents from words, uses words as the features, uses unigrams (single words) as the features, and limits the number of features to the top `500,000` by frequency.
+* Computes the `TF-IDF matrix` for the text data using the `tfidf_vectorizer` object and stores it in a sparse matrix called `tfidf`.
+* Gets the feature names (vocabulary) of the TF-IDF matrix using the get_feature_names() method of the tfidf_vectorizer object and stores them in a list called `vocab`.
+* Converts the tfidf sparse matrix to a dense NumPy array called `unigram_data`.
 * Converts the dense array to a Pandas DataFrame called features and rounds the values to one decimal place.
 * Binarizes the features DataFrame by setting non-zero values to 1.
-* Saves the fitted TfidfVectorizer object to a file named 'DS.pkl' using the pickle.dump() function.
-* Saves the computed TF-IDF matrix to a file named 'DS2.pkl' using the pickle.dump() function.
+* Saves the fitted TfidfVectorizer object to a file named `'DS.pkl'` using the pickle.dump() function.
+* Saves the computed TF-IDF matrix to a file named `'DS2.pkl'` using the pickle.dump() function.
 
