@@ -175,3 +175,64 @@ except FileNotFoundError:
 * Load trained models and pre-trained preprocessing.LabelEncoder object, if they exist.
 * If the trained models do not exist, pre-process the input features and train `MultinomialNB`
 * Save the trained model and preprocessing.LabelEncoder object to disk using pickle and print a message to confirm the save operation.
+
+## Predaction
+```c
+# Take input text from user
+Sample_Text = input('Enter Text \n')
+
+# Tokenize the input text
+tokens = tokenize(Sample_Text)
+print("Tokens is ----> ", tokens)
+
+# Normalize the tokens
+for row in range(len(tokens)):
+    for token in range(len(tokens)):
+         tokens[token] = normalize(tokens[token])
+
+print("After Normalization ----> ", tokens)
+
+# Remove stop words from the tokens
+tokens = remove_Stop_Words(tokens)
+
+print("After Remove Stop words ----> ", tokens)
+
+# Stem the tokens
+tokens = stemming(tokens)
+print("After Stemming ----> ", tokens)
+
+# Convert tokens into list of strings
+tv = [str(tokens)]
+
+# Transform tokens using the pre-trained TF-IDF vectorizer
+x = tfidf_vectorizer.transform(tv)
+
+# Predict the class of the input text using the pre-trained Logistic Regression model
+pred = LR.predict(x)
+
+# Get the probability estimates for each class from the pre-trained Logistic Regression model
+prob = LR.predict_proba(x)
+
+# Check if the predicted probability for both positive and negative classes is below a threshold, else predict the class with highest probability
+if prob[0][0] < 0.6 and prob[0][1] < 0.6:
+    pred = ['neutral']
+else:
+    pred = pro.inverse_transform(pred)
+
+# Print the predicted class and probabilities for each class
+classes = LR.classes_
+for i, p in enumerate(prob[0]):
+    print(f"{classes[i]}: {p:.4f}")
+
+print('Predicted class:', ''.join(pred))
+```
+This code predicts the sentiment class of a given input text using a Naive Bayes model that was trained on preprocessed text data. The prediction process involves the following steps:
+
+1. The input text is first tokenized using the tokenize() function.
+2 .The resulting tokens are normalized using the normalize() function.
+3. Stop words are removed from the normalized tokens using the remove_Stop_Words() function.
+4. The remaining tokens are stemmed using the stemming() function.
+5. The preprocessed tokens are then transformed using the pre-trained TF-IDF vectorizer, tfidf_vectorizer.
+6. The transformed tokens are passed to the trained Naive Bayes model, nb, to predict the sentiment class of the input text.
+7. The predicted class and probabilities for each class are printed to the console. If the predicted probability for both positive and negative classes is below a threshold of 0.6, the predicted class is set to 'neutral'.
+8. The final predicted class is printed to the console.
