@@ -176,7 +176,7 @@ except FileNotFoundError:
 * If the trained models do not exist, pre-process the input features and train `MultinomialNB`
 * Save the trained model and preprocessing.LabelEncoder object to disk using pickle and print a message to confirm the save operation.
 
-## Predaction
+## Prediction
 ```c
 # Take input text from user
 Sample_Text = input('Enter Text \n')
