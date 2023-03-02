@@ -98,7 +98,7 @@ print(stemming(filtered_tokens))
 # Output: ['شرب', 'حمد']
 ```
 
-## Feature Extraction
+## Feature Extraction using TF-IDF
 ```C
 # Load the dataset
 sample = pd.read_csv('DS.csv')
