@@ -1,7 +1,4 @@
-joblib==1.1.0
-numpy==1.19.5
-pandas==1.3.5
+PyQt5==5.15.4
 nltk==3.6.5
 pyarabic==0.6.14
-scikit-learn==1.0.2
-stop-words==2018.7.23
+camel-tools==1.2.0
