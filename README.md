@@ -7,13 +7,12 @@ Is a process of extracting the sentiment or emotion expressed in a given text in
 # Dependencies
 This code requires the following libraries:   
 * pickle
-* joblib
 * numpy
 * pandas
 * nltk (specifically the ISRIStemmer module)
 * pyarabic
 * sklearn (specifically the LogisticRegression, MultinomialNB, confusion_matrix, ConfusionMatrixDisplay, f1_score, precision_score, train_test_split, TfidfVectorizer, CountVectorizer, preprocessing, and metrics modules)
-* stop_words (specifically the ArabicStopWords module)
+* stop_words (specifically the ArabicStopWords module is our built-in module)
 * warnings (to suppress warnings)
 * re (for regular expressions)
 # Installation
