@@ -21,6 +21,6 @@ To install the required libraries, run:
 pip install -r requirements.txt
 ```
 # Demo
-https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
+https://drive.google.com/drive/folders/19rPIVvh9r1EgbsvAWwDsdzdZmqScRPmX?usp=share_link
 # Dataset
 https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
