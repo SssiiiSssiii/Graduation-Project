@@ -20,3 +20,6 @@ pip install -r requirements.txt
 * Watch our video demo here: https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing
 # The dataset used in the analysis
 https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
+# License
+Made with ❤️ by [MOHAMED AHMED ABDEL FATTAH], [YOUSSEF HAMADA IBRAHIM] and [MOHAMED GHAREEB MOHAMED] 
+
