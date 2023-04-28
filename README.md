@@ -7,7 +7,7 @@
 
 # Installation
 1. First dowmload the demo from that link                     
-* https://drive.google.com/drive/folders/19rPIVvh9r1EgbsvAWwDsdzdZmqScRPmX?usp=share_link        
+* https://drive.google.com/file/d/1zObUmGhdijFBsiX0o4AYImsWOrwRaVZa/view?usp=sharing   
 2. Dependencies      
 * To install the required libraries for the `demo`:
 1. Dowmload `Dependencies.txt`
@@ -16,5 +16,8 @@
 pip install -r requirements.txt
 ```
 3. Enjoy
+# How to use?
+* Watch that
+https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing
 # The dataset used in the analysis
 https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
