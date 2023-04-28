@@ -144,8 +144,6 @@ try:
     # Load trained models and label encoder from disk
     with open('nb_model.pkl', 'rb') as f:
         nb = pickle.load(f)
-    with open('lr_model.pkl', 'rb') as f:
-        LR = pickle.load(f)
     with open('pro_encoder.pkl', 'rb') as f:
         pro = pickle.load(f)
     print('Trained models loaded from disk')
