@@ -6,20 +6,12 @@
 
 
 # Installation
-1- First dowmload the demo from that link 
-https://drive.google.com/drive/folders/19rPIVvh9r1EgbsvAWwDsdzdZmqScRPmX?usp=share_link
-2- Dependencies
-* pickle
-* numpy
-* pandas
-* nltk (specifically the ISRIStemmer module)
-* pyarabic
-* sklearn
-* stop_words (specifically the ArabicStopWords module is our built-in module)
-* warnings (to suppress warnings)
-* re (for regular expressions)
-# Installation
-To install the required libraries for the demo, run:
+1. First dowmload the demo from that link                     
+* https://drive.google.com/drive/folders/19rPIVvh9r1EgbsvAWwDsdzdZmqScRPmX?usp=share_link        
+2. Dependencies      
+* To install the required libraries for the `demo`:
+1. Dowmload `Dependencies.txt`
+2. Run
 ```c
 pip install -r requirements.txt
 ```
