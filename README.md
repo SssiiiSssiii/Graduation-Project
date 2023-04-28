@@ -21,5 +21,8 @@ pip install -r requirements.txt
 # The dataset used in the analysis
 https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
 # License
-Made with ❤️ by [MOHAMED AHMED ABDEL FATTAH], [YOUSSEF HAMADA IBRAHIM] and [MOHAMED GHAREEB MOHAMED] 
+Made with ❤️ by      
+* MOHAMED AHMED ABDEL FATTAH
+* YOUSSEF HAMADA IBRAHIM
+* MOHAMED GHAREEB MOHAMED 
 
