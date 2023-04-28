@@ -9,10 +9,17 @@
 * A list of tokens, where each token is a string representing a word in the input text.         
 ### Example Usage:
 ```c
-import araby
+from camel_tools.tokenizers.word import simple_word_tokenize
+from camel_tools.disambig.mle import MLEDisambiguator
+from camel_tools.tokenizers.morphological import MorphologicalTokenizer
 
-def tokenize(sample):
-    tokens = araby.tokenize(sample)
+MLE = MLEDisambiguator.pretrained('calima-msa-r13')
+TOKENIZER = MorphologicalTokenizer(MLE, scheme='d3tok', split=True)
+
+def tokenize(sentence):
+    sentence = simple_word_tokenize(sentence)
+    tokens = TOKENIZER.tokenize(sentence)
+    tokens = [token for token in tokens if '+' not in token]
     return tokens
 
 text = "مرحبا بالعالم"
