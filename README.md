@@ -1,4 +1,5 @@
 ![alt text](Images/Logo.png)
+![alt text](Images/Demo.png)
 
 
 # Qarek: Arabic Sentiment Analysis Tool
