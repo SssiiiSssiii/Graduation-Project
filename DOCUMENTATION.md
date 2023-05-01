@@ -118,8 +118,21 @@ print(stemming(filtered_tokens))
 
 # Output: ['شرب', 'حمد']
 ```
+           User
+             |
+     TfidfVectorizer
+             |
+    Transforming Data
+             |
+    Extracting Feature Names
+             |
+    Converting to DataFrame
+             |
+       Thresholding
+         
+## Feature Extraction using TF-IDF    
 
-## Feature Extraction using TF-IDF
+
 ```C
 # Load the dataset
 sample = pd.read_csv('DS.csv')
@@ -183,7 +196,7 @@ except FileNotFoundError:
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=333)
 
-    # Train a Multinomial Naive Bayes model and a logistic regression model
+    # Train a Multinomial Naive Bayes model 
     nb = MultinomialNB()
     nb = nb.fit(X_train, y_train)
 
