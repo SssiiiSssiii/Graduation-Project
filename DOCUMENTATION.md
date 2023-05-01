@@ -1,4 +1,18 @@
 
+             User
+               |
+         Preprocessing
+               |
+      Reading and Parsing
+               |
+         Data Cleaning
+               |
+         Data Tokenization
+               |
+        Stop Word Removal
+               |
+            Stemming
+
 ## tokenize(sample) function:
 * Tokenizes an Arabic text into a list of tokens. 
 * This function uses the araby library, which is a Python package for working with Arabic text.
