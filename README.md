@@ -9,15 +9,17 @@
 
 
 # Installation
-1. First download the demo from that link                     
+1. First `download` the demo from that link                     
 * https://drive.google.com/file/d/1zObUmGhdijFBsiX0o4AYImsWOrwRaVZa/view?usp=sharing   
 2. Dependencies      
-* To install the required libraries for the `demo`:
+* To `install` the required libraries for the `demo`:
 1. Download `Dependencies.txt`
-2. Run
+2. `Run`
 ```c
-pip install -r requirements.txt
+pip install -r Dependencies.txt
 ```
+4. `Replace` the file that called 'camel_tools' with https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link   
+the file should be in that path "C:\Users\"YOUR_USER_NAME"\AppData\Roaming"
 3. Enjoy
 # How to use?
 * Watch our video demo here: https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing
