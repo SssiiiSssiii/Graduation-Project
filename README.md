@@ -18,7 +18,7 @@
 ```c
 pip install -r Dependencies.txt
 ```
-4. `Replace` the file that called 'camel_tools' with https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link   
+4. `Replace` the file that called `camel_tools` with https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link   
 the file should be in that path "C:\Users\"YOUR_USER_NAME"\AppData\Roaming"
 3. Enjoy :)
 # How to use?
