@@ -1,17 +1,5 @@
+![alt text](../Images/Flowchart.png)
 
-             User
-               |
-         Preprocessing
-               |
-      Reading and Parsing
-               |
-         Data Cleaning
-               |
-         Data Tokenization
-               |
-        Stop Word Removal
-               |
-            Stemming
 
 ## tokenize(sample) function:
 * Tokenizes an Arabic text into a list of tokens. 
