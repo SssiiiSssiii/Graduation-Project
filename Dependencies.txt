@@ -1,4 +1,0 @@
-PyQt5==5.15.4
-nltk==3.6.5
-pyarabic==0.6.14
-camel-tools==1.2.0
