@@ -13,11 +13,8 @@
 * https://drive.google.com/file/d/1zObUmGhdijFBsiX0o4AYImsWOrwRaVZa/view?usp=sharing   
 2. Dependencies      
 * To `install` the required libraries for the `demo`:
-1. Download `Dependencies.txt`
+1. Download `Dependencies.bat` from above  
 2. Run
-```c
-pip install -r Dependencies.txt
-```
 4. Replace the file that called `camel_tools` in your PC with https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link   
 
 3. Enjoy :)
