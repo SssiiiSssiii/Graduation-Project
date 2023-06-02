@@ -21,7 +21,7 @@
 # How to use?
 * Watch our video demo here: https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing    
 * To determine the sentiment of a sentence or paragraph, input the text into the designated field and then click the `انطباعي` button.    
-* To determine the sentiment of a file containing multiple sentences, click the `عاوز ملف` button and choose desired file.                                     
+* To determine the sentiment of a file containing multiple sentences, click the `عاوز ملف` button and choose your desired file.                                     
 # The dataset used in the analysis
 https://drive.google.com/drive/folders/1FD07FkOHZ0HkxAdUYxaped2P696Br53R?usp=share_link
 # License
