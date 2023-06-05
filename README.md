@@ -10,7 +10,7 @@
 
 # Installation
 1. First `download` the demo from that link                         
-* https://drive.google.com/file/d/1zObUmGhdijFBsiX0o4AYImsWOrwRaVZa/view?usp=sharing   
+ https://drive.google.com/file/d/1zObUmGhdijFBsiX0o4AYImsWOrwRaVZa/view?usp=sharing   
 2. Dependencies      
 * To `install` the required libraries for the `demo`:
 1. Download `Dependencies.bat` from above  
