@@ -15,7 +15,9 @@
 * To `install` the required libraries for the `demo`:
 1. Download `Dependencies.bat` from above  
 2. Run
-4. Replace the file that called `camel_tools` in your PC with https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link   
+4. Replace the file called camel_tools in your PC with in this path "C:\Users\YOUR_USER_NAME\AppData\Roaming "  https://drive.google.com/file/d/1fRwFqEpXsJUzFINzwxxbwL_80c1mTPql/view?usp=share_link     
+   
+                                                  
 
 3. Enjoy :)
 # How to use?
