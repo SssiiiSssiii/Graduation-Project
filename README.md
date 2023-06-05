@@ -21,7 +21,7 @@
 
 3. Enjoy :)
 # How to use?
-* Watch our video demo here: https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing    
+* Watch our video demo here:       https://drive.google.com/file/d/1BAxq8-hsrNNPM_SmXcmLaCivxaG-_B9M/view?usp=sharing    
 * To determine the sentiment of a sentence or paragraph, input the text into the designated field and then click the `انطباعي` button.    
 * To determine the sentiment of a file containing multiple sentences, click the `عاوز ملف` button and choose your desired file.
 * To determine the sentiment of a particular word in a blog , input click the `بحث وانطباع` button then an input text field will appear, write the desired word in the input field. and provide the blog text in another the input field.
